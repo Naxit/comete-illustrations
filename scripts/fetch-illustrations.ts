@@ -191,7 +191,9 @@ function collectIllustrations(node: FigmaNode): IllustrationEntry[] {
     // Skip non-illustration node types (instances, rectangles, etc.)
     if (!ILLUSTRATION_NODE_TYPES.has(child.type)) {
       if (DEBUG) {
-        console.log(`  ⏭️  Skipping [${child.type}] "${child.name}" id=${child.id}`);
+        console.log(
+          `  ⏭️  Skipping [${child.type}] "${child.name}" id=${child.id}`,
+        );
       }
       return;
     }
@@ -215,9 +217,7 @@ function collectIllustrations(node: FigmaNode): IllustrationEntry[] {
     }
 
     if (DEBUG) {
-      console.log(
-        `  ✓ [${child.type}] "${child.name}" id=${child.id}`,
-      );
+      console.log(`  ✓ [${child.type}] "${child.name}" id=${child.id}`);
     }
 
     const name = toPascalCase(child.name);
