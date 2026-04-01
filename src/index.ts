@@ -27,9 +27,11 @@ export { SessionTimeout } from "./illustrations/SessionTimeout";
 export { Shield } from "./illustrations/Shield";
 export { Site } from "./illustrations/Site";
 export { WarningClock } from "./illustrations/WarningClock";
-
-// Types
-export type { IllustrationProps, IllustrationName, IllustrationCategory } from "./types";
-
 // Registry
 export { illustrationRegistry, illustrationsByCategory } from "./registry";
+// Types
+export type {
+  IllustrationCategory,
+  IllustrationName,
+  IllustrationProps,
+} from "./types";

@@ -30,10 +30,10 @@ export type IllustrationName =
   | "WarningClock";
 
 /** Available illustration categories. */
-export type IllustrationCategory =
-  | never;
+export type IllustrationCategory = never;
 
-export interface IllustrationProps extends Omit<SVGAttributes<SVGSVGElement>, "width" | "height"> {
+export interface IllustrationProps
+  extends Omit<SVGAttributes<SVGSVGElement>, "width" | "height"> {
   /**
    * Rendered width in pixels. Defaults to the illustration's natural width.
    * If only width is set, height scales proportionally.

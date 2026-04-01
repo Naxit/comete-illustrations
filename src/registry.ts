@@ -1,7 +1,5 @@
 /* Auto-generated — do not edit manually */
 import type { ComponentType } from "react";
-import type { IllustrationName, IllustrationProps } from "./types";
-
 import { AddDocuments } from "./illustrations/AddDocuments";
 import { AppDisabled } from "./illustrations/AppDisabled";
 import { ClockingCode } from "./illustrations/ClockingCode";
@@ -28,9 +26,13 @@ import { SessionTimeout } from "./illustrations/SessionTimeout";
 import { Shield } from "./illustrations/Shield";
 import { Site } from "./illustrations/Site";
 import { WarningClock } from "./illustrations/WarningClock";
+import type { IllustrationName, IllustrationProps } from "./types";
 
 /** Maps every illustration name to its React component. */
-export const illustrationRegistry: Record<IllustrationName, ComponentType<IllustrationProps>> = {
+export const illustrationRegistry: Record<
+  IllustrationName,
+  ComponentType<IllustrationProps>
+> = {
   AddDocuments,
   AppDisabled,
   ClockingCode,
@@ -61,5 +63,32 @@ export const illustrationRegistry: Record<IllustrationName, ComponentType<Illust
 
 /** Maps categories to their illustration names. */
 export const illustrationsByCategory: Record<string, IllustrationName[]> = {
-  "uncategorized": ["AddDocuments", "AppDisabled", "ClockingCode", "Configured", "ConnexionError", "Create", "Credentials", "EditUser", "Email", "EmailReceived", "Empty", "ForbiddenAccess", "GeofencingAccess", "GeofencingUnavailable", "InitializeNfcBadge", "Landing", "OnboardingClockingIn", "OnboardingConnexion", "OnboardingSettings", "SendCode", "Sent", "SessionInactive", "SessionTimeout", "Shield", "Site", "WarningClock"],
+  uncategorized: [
+    "AddDocuments",
+    "AppDisabled",
+    "ClockingCode",
+    "Configured",
+    "ConnexionError",
+    "Create",
+    "Credentials",
+    "EditUser",
+    "Email",
+    "EmailReceived",
+    "Empty",
+    "ForbiddenAccess",
+    "GeofencingAccess",
+    "GeofencingUnavailable",
+    "InitializeNfcBadge",
+    "Landing",
+    "OnboardingClockingIn",
+    "OnboardingConnexion",
+    "OnboardingSettings",
+    "SendCode",
+    "Sent",
+    "SessionInactive",
+    "SessionTimeout",
+    "Shield",
+    "Site",
+    "WarningClock",
+  ],
 };
