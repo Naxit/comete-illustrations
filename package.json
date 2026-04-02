@@ -1,6 +1,6 @@
 {
   "name": "@naxit/comete-illustrations",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Comète illustration library — React components for empty states, onboarding, and contextual visuals",
   "type": "module",
   "main": "dist/index.js",
