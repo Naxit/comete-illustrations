@@ -17,6 +17,7 @@
  * Usage:  tsx scripts/generate-components.ts
  */
 
+import { execSync } from "node:child_process";
 import {
   existsSync,
   mkdirSync,
@@ -370,6 +371,18 @@ function main() {
   // Generate barrel
   writeFileSync(join(SRC_DIR, "index.ts"), generateIndex(names), "utf-8");
   console.log("   ✓ index.ts");
+
+  // Format generated output with Biome so re-running the pipeline doesn't
+  // leave the working tree dirty against the project's lint config.
+  try {
+    execSync("pnpm exec biome check --write src/", {
+      cwd: ROOT,
+      stdio: "ignore",
+    });
+    console.log("   ✓ formatted with Biome");
+  } catch {
+    console.warn("⚠️  Biome formatting failed — generated files may need manual formatting");
+  }
 
   console.log(`\n✅ Generated ${names.length} React illustration components`);
 }
