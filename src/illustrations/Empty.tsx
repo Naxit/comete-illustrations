@@ -17,6 +17,7 @@ export function Empty({
       viewBox={VIEW_BOX}
       width={width}
       height={height}
+      fill="none"
       className={className}
       role={isDecorative ? "presentation" : "img"}
       aria-hidden={isDecorative ? "true" : undefined}
